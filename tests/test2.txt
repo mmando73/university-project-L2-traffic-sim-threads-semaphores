@@ -1,0 +1,67 @@
+Test 2: Entrée Avec Priorité
+Entrée: A2cC3
+
+FCFS Sans Priorité (o=1, p=0): Les véhicules entrent selon l'ordre d'apparition.
+Sortie Attendue: V1|V1|V2|V3|V3|V3
+Sortie Réelle:
+mmando@mmando-Latitude-E7270:~/Desktop/TPN2/GestionTrafic$ ./bin/gestionTrafic -o 1 -p 0 A2cC3 
+Véhicule V1 arrive depuis A avec priorité 1 entre le rond-point.
+Véhicule V1 traverse le rond-point. Temps nécessaire pour le passage : 2
+Véhicule V1 sort du rond-point.
+Véhicule V2 arrive depuis C avec priorité 0 entre le rond-point.
+Véhicule V2 traverse le rond-point. Temps nécessaire pour le passage : 1
+Véhicule V2 sort du rond-point.
+Véhicule V3 arrive depuis C avec priorité 1 entre le rond-point.
+Véhicule V3 traverse le rond-point. Temps nécessaire pour le passage : 3
+Véhicule V3 sort du rond-point.
+Diagramme de Gantt :
+V1|V1|V2|V3|V3|V3
+
+FCFS Avec Priorité (o=1, p=1): Priorité donnée aux véhicules prioritaires triés selon l'ordre d'apparition.
+Sortie Attendue: V1|V1|V3|V3|V3|V2
+Sortie Réelle:
+mmando@mmando-Latitude-E7270:~/Desktop/Cours/S4/TP/SE/TPN2/tests/TPN2/GestionTrafic$ ./bin/gestionTrafic -o 1 -p 1 A2cC3 
+Véhicule V1 arrive depuis A avec priorité 1 entre le rond-point.
+Véhicule V1 traverse le rond-point. Temps nécessaire pour le passage : 2
+Véhicule V1 sort du rond-point.
+Véhicule V3 arrive depuis C avec priorité 1 entre le rond-point.
+Véhicule V3 traverse le rond-point. Temps nécessaire pour le passage : 3
+Véhicule V3 sort du rond-point.
+Véhicule V2 arrive depuis C avec priorité 0 entre le rond-point.
+Véhicule V2 traverse le rond-point. Temps nécessaire pour le passage : 1
+Véhicule V2 sort du rond-point.
+Diagramme de Gantt :
+V1|V1|V3|V3|V3|V2
+
+SJF Sans Priorité (o=0, p=0): Les véhicules sont triés par temps de traversée.
+Sortie Attendue: V2|V1|V1|V3|V3|V3
+Sortie Réelle:
+mmando@mmando-Latitude-E7270:~/Desktop/TPN2/GestionTrafic$ ./bin/gestionTrafic -o 0 -p 0 A2cC3 
+Véhicule V2 arrive depuis C avec priorité 0 entre le rond-point.
+Véhicule V2 traverse le rond-point. Temps nécessaire pour le passage : 1
+Véhicule V2 sort du rond-point.
+Véhicule V1 arrive depuis A avec priorité 1 entre le rond-point.
+Véhicule V1 traverse le rond-point. Temps nécessaire pour le passage : 2
+Véhicule V1 sort du rond-point.
+Véhicule V3 arrive depuis C avec priorité 1 entre le rond-point.
+Véhicule V3 traverse le rond-point. Temps nécessaire pour le passage : 3
+Véhicule V3 sort du rond-point.
+Diagramme de Gantt :
+V2|V1|V1|V3|V3|V3
+
+
+SJF Avec Priorité (o=0, p=1): Priorité donnée aux véhicules prioritaires, ensuite triés par temps de traversée.
+Sortie Attendue: V1|V1|V3|V3|V3|V2
+Sortie Réelle:
+mmando@mmando-Latitude-E7270:~/Desktop/TPN2/GestionTrafic$ ./bin/gestionTrafic -o 0 -p 1 A2cC3 
+Véhicule V1 arrive depuis A avec priorité 1 entre le rond-point.
+Véhicule V1 traverse le rond-point. Temps nécessaire pour le passage : 2
+Véhicule V1 sort du rond-point.
+Véhicule V3 arrive depuis C avec priorité 1 entre le rond-point.
+Véhicule V3 traverse le rond-point. Temps nécessaire pour le passage : 3
+Véhicule V3 sort du rond-point.
+Véhicule V2 arrive depuis C avec priorité 0 entre le rond-point.
+Véhicule V2 traverse le rond-point. Temps nécessaire pour le passage : 1
+Véhicule V2 sort du rond-point.
+Diagramme de Gantt :
+V1|V1|V3|V3|V3|V2
